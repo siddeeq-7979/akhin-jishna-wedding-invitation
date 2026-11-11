@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+  .font-serif-wedding {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+  .font-script {
+    font-family: 'Great Vibes', cursive;
+  }
+  .font-pinyon {
+    font-family: 'Pinyon Script', cursive;
+  }
+  .font-monogram {
+    font-family: 'Cinzel Decorative', 'Cinzel', serif;
+  }
+  .font-sans-clean {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+/* Custom gold gradient and traditional accents */
+.bg-gold-metallic {
+  background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 25%, #c5a059 50%, #fbf3cd 75%, #a87928 100%);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #996515 0%, #C5A059 40%, #8C6A28 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.kasavu-border {
+  border-image: linear-gradient(to right, #C5A059, #F4E8C1, #8C6A28) 1;
+}
+
+@keyframes pulseSlow {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.04); opacity: 1; }
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 4s ease-in-out infinite;
+}
+

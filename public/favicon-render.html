@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body {
+        width: 128px;
+        height: 128px;
+        overflow: hidden;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .circle {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 35% 30%, #2A2018 0%, #14100D 100%);
+        border: 3px solid #C5A059;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.5), inset 0 0 0 2px rgba(244, 232, 193, 0.4);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .crown {
+        font-size: 11px;
+        color: #E2C792;
+        margin-bottom: -2px;
+      }
+      .monogram {
+        font-family: 'Cinzel Decorative', serif;
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: #F4E8C1;
+        background: linear-gradient(135deg, #F4E8C1 0%, #C5A059 60%, #8C6A28 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 1;
+        margin-top: 2px;
+      }
+      .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #E11D48;
+        border: 1px solid #C5A059;
+        margin-top: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circle">
+      <div class="crown">✦</div>
+      <div class="monogram">A&J</div>
+      <div class="dot"></div>
+    </div>
+  </body>
+</html>

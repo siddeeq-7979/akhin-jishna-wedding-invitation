@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>OG Cover Preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@600;700;800&family=Cormorant+Garamond:ital,wght@0,600;1,400;1,600&family=Great+Vibes&family=Pinyon+Script&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        background-color: #FAF7F2;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        color: #2C241B;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .bg-texture {
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(circle at 10% 20%, rgba(197, 160, 89, 0.08) 0%, transparent 40%),
+                          radial-gradient(circle at 90% 80%, rgba(74, 107, 83, 0.08) 0%, transparent 40%),
+                          radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8) 0%, rgba(245, 237, 225, 0.6) 100%);
+      }
+      .card-border {
+        position: absolute;
+        inset: 20px;
+        border: 2px solid #C5A059;
+        border-radius: 28px;
+        pointer-events: none;
+      }
+      .card-inner-border {
+        position: absolute;
+        inset: 28px;
+        border: 1px dashed rgba(197, 160, 89, 0.5);
+        border-radius: 20px;
+        pointer-events: none;
+      }
+      .container {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        padding: 50px 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .left-col {
+        flex: 1;
+        max-width: 630px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .invocation {
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: #8C6A28;
+        margin-bottom: 8px;
+      }
+      .monogram-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 12px;
+      }
+      .monogram {
+        font-family: 'Cinzel Decorative', serif;
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        color: #996515;
+        background: linear-gradient(135deg, #7A5A1F 0%, #C5A059 50%, #996515 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .monogram-divider {
+        width: 40px;
+        height: 1.5px;
+        background: #C5A059;
+      }
+      .couple-names {
+        font-family: 'Great Vibes', cursive;
+        font-size: 76px;
+        line-height: 1.05;
+        color: #1C1917;
+        margin-bottom: 12px;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.04);
+      }
+      .couple-names span {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+        font-style: italic;
+        font-size: 36px;
+        color: #C5A059;
+        margin: 0 10px;
+      }
+      .subtitle {
+        font-family: 'Cinzel', serif;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #8C6A28;
+        margin-bottom: 22px;
+      }
+      .event-badges {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .event-item {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        background: rgba(255, 255, 255, 0.85);
+        border: 1px solid rgba(232, 223, 200, 0.9);
+        padding: 10px 16px;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      }
+      .event-circle {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1;
+        flex-shrink: 0;
+      }
+      .event-circle.gold {
+        background: #E2C792;
+        color: #5E4413;
+        border: 1.5px solid #8C6A28;
+      }
+      .event-circle.rose {
+        background: #E11D48;
+        color: #FFFFFF;
+        border: 1.5px solid #9F1239;
+      }
+      .event-circle span {
+        font-size: 9px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      .event-info h4 {
+        font-family: 'Cinzel', serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: #1C1917;
+      }
+      .event-info p {
+        font-size: 11px;
+        color: #57534E;
+        margin-top: 1px;
+      }
+      .right-col {
+        position: relative;
+        width: 380px;
+        height: 480px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .portrait-frame {
+        position: relative;
+        width: 310px;
+        height: 430px;
+        border-radius: 155px 155px 40px 40px;
+        overflow: hidden;
+        border: 4px solid #C5A059;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.16), 0 0 0 8px rgba(255, 255, 255, 0.8);
+        background: #F5EDE1;
+      }
+      .portrait-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom center;
+      }
+      .portrait-badge {
+        position: absolute;
+        bottom: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(28, 25, 23, 0.95);
+        color: #E2C792;
+        border: 1px solid rgba(197, 160, 89, 0.7);
+        padding: 5px 16px;
+        border-radius: 30px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        white-space: nowrap;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      }
+      .botanical-top {
+        position: absolute;
+        top: -15px;
+        right: -25px;
+        width: 140px;
+        opacity: 0.85;
+      }
+      .botanical-bottom {
+        position: absolute;
+        bottom: -20px;
+        left: -30px;
+        width: 140px;
+        opacity: 0.85;
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-texture"></div>
+    <div class="card-border"></div>
+    <div class="card-inner-border"></div>
+
+    <div class="container">
+      <!-- Left Details Column -->
+      <div class="left-col">
+        <div class="invocation">ശ്രീ ഗുരുവായൂരപ്പൻ തുണ · ॐ · ശുഭം</div>
+
+        <div class="monogram-badge">
+          <span class="monogram">A & J</span>
+          <div class="monogram-divider"></div>
+          <span style="font-size: 11px; font-weight: 600; color: #8C6A28; letter-spacing: 0.2em; text-transform: uppercase;">Wedding 2027</span>
+        </div>
+
+        <div class="couple-names">
+          Akhin<span>&</span>Jishna
+        </div>
+
+        <div class="subtitle">Wedding & Grand Reception Invitation</div>
+
+        <div class="event-badges">
+          <div class="event-item">
+            <div class="event-circle gold">
+              20
+              <span>Jan</span>
+            </div>
+            <div class="event-info">
+              <h4>Wedding Ceremony (താലികെട്ട്)</h4>
+              <p>Wednesday, 20 Jan 2027 · Guruvayur Sree Krishna Temple</p>
+            </div>
+          </div>
+
+          <div class="event-item">
+            <div class="event-circle rose">
+              23
+              <span>Jan</span>
+            </div>
+            <div class="event-info">
+              <h4>Grand Reception (സൽക്കാരം)</h4>
+              <p>Saturday, 23 Jan 2027 · Groom's Residence, Wayanad (4–8 PM)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Portrait Column -->
+      <div class="right-col">
+        <!-- SVG Botanical leaf top -->
+        <svg class="botanical-top" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 50 Q 50 10, 90 20" stroke="#8C6A28" stroke-width="2" fill="none"/>
+          <ellipse cx="30" cy="30" rx="12" ry="6" transform="rotate(-30 30 30)" fill="#5A7D64" opacity="0.8"/>
+          <ellipse cx="60" cy="20" rx="14" ry="7" transform="rotate(-15 60 20)" fill="#789A80" opacity="0.85"/>
+          <ellipse cx="85" cy="22" rx="10" ry="5" transform="rotate(10 85 22)" fill="#5A7D64" opacity="0.8"/>
+        </svg>
+
+        <div class="portrait-frame">
+          <img class="portrait-img" src="./assets/aistudio/IMG_4027_7c393d31.jpeg" alt="Akhin & Jishna" />
+          <div class="portrait-badge">Guruvayur · 2027</div>
+        </div>
+
+        <!-- SVG Botanical leaf bottom -->
+        <svg class="botanical-bottom" viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 50 Q 50 10, 90 20" stroke="#8C6A28" stroke-width="2" fill="none"/>
+          <ellipse cx="30" cy="30" rx="12" ry="6" transform="rotate(-30 30 30)" fill="#5A7D64" opacity="0.8"/>
+          <ellipse cx="60" cy="20" rx="14" ry="7" transform="rotate(-15 60 20)" fill="#789A80" opacity="0.85"/>
+          <ellipse cx="85" cy="22" rx="10" ry="5" transform="rotate(10 85 22)" fill="#5A7D64" opacity="0.8"/>
+        </svg>
+      </div>
+    </div>
+  </body>
+</html>

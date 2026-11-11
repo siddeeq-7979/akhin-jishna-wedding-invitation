@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5C378"/>
+      <stop offset="35%" stop-color="#C5A059"/>
+      <stop offset="70%" stop-color="#F7EAC4"/>
+      <stop offset="100%" stop-color="#8C6A28"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#241B15"/>
+      <stop offset="50%" stop-color="#14110E"/>
+      <stop offset="100%" stop-color="#2B1E16"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Circular Outer Background -->
+  <circle cx="64" cy="64" r="62" fill="url(#bgGrad)"/>
+
+  <!-- Concentric Gold Rings -->
+  <circle cx="64" cy="64" r="58" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" stroke-dasharray="1 0"/>
+  <circle cx="64" cy="64" r="53" fill="none" stroke="#C5A059" stroke-width="0.8" stroke-dasharray="3 2" opacity="0.85"/>
+
+  <!-- Top Crown / Lotus / Sparkle Motif -->
+  <g transform="translate(64, 25)" fill="url(#goldGrad)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="2.5"/>
+    <path d="M0 -7 C1.5 -3 3.5 -1.5 5 0 C3.5 1.5 1.5 3 0 7 C-1.5 3 -3.5 1.5 -5 0 C-3.5 -1.5 -1.5 -3 0 -7 Z"/>
+    <circle cx="-10" cy="2" r="1.5"/>
+    <circle cx="10" cy="2" r="1.5"/>
+  </g>
+
+  <!-- Monogram A & J -->
+  <text x="64" y="78"
+        text-anchor="middle"
+        font-family="'Cinzel', 'Cinzel Decorative', 'Georgia', serif"
+        font-size="34"
+        font-weight="700"
+        letter-spacing="2"
+        fill="url(#goldGrad)"
+        filter="url(#shadow)">
+    A&amp;J
+  </text>
+
+  <!-- Bottom Sacred Knot / Heart Accent -->
+  <g transform="translate(64, 98)" fill="#C5A059" opacity="0.95">
+    <path d="M0 4 C -2 1, -5 -1, -5 -4 C -5 -6.5, -3 -8, -0.5 -8 C 0 -8, 0 -7.5, 0 -7.5 C 0 -7.5, 0 -8, 0.5 -8 C 3 -8, 5 -6.5, 5 -4 C 5 -1, 2 1, 0 4 Z" fill="#E05260"/>
+    <circle cx="-12" cy="-2" r="1.2" fill="url(#goldGrad)"/>
+    <path d="M-10 -2 Q-5 -4 0 -2 Q5 -4 10 -2" fill="none" stroke="url(#goldGrad)" stroke-width="1"/>
+    <circle cx="12" cy="-2" r="1.2" fill="url(#goldGrad)"/>
+  </g>
+</svg>
