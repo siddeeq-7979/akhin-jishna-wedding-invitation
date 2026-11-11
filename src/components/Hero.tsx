@@ -39,7 +39,6 @@ export const Hero: React.FC<HeroProps> = ({ onScrollToSection }) => {
       <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center">
         <div className="flex items-center gap-3 text-xs tracking-[0.25em] text-[#8C6A28] font-medium uppercase mb-3">
           <span className="w-8 h-[1px] bg-[#C5A059]/60" />
-          <span>ശ്രീ ഗുരുവായൂരപ്പൻ തുണ · ॐ · ശുഭം</span>
           <span className="w-8 h-[1px] bg-[#C5A059]/60" />
         </div>
 

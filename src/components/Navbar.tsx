@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Play, Pause, Music } from 'lucide-react';
+import { Play, Pause, Music } from 'lucide-react';
 
 interface NavbarProps {
-  onReopenEnvelope: () => void;
+  onReopenEnvelope?: () => void;
   isPlaying?: boolean;
   onToggleMusic?: () => void;
 }
@@ -85,16 +85,6 @@ export const Navbar: React.FC<NavbarProps> = ({
               )}
             </button>
           )}
-
-          {/* Envelope Reopen Button */}
-          <button
-            onClick={onReopenEnvelope}
-            className="px-3.5 py-1.5 rounded-full bg-white/90 hover:bg-white text-stone-800 border border-[#E8DFC8] text-xs font-medium tracking-wide shadow-xs transition-all active:scale-95 cursor-pointer flex items-center gap-1.5"
-            title="Re-open wedding envelope"
-          >
-            <Mail className="w-3.5 h-3.5 text-[#C5A059]" />
-            <span className="hidden xs:inline">Envelope</span>
-          </button>
         </div>
       </div>
     </nav>

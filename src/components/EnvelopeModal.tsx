@@ -146,9 +146,6 @@ export const EnvelopeModal: React.FC<EnvelopeModalProps> = ({ isOpen, onOpenInvi
                 transition={{ duration: 0.9, ease: 'easeOut' }}
                 className="absolute inset-x-4 top-4 bottom-3 bg-[#FAF7F2] rounded-xl shadow-lg border border-[#E8DFC8] p-4 flex flex-col items-center justify-center text-center z-20"
               >
-                <div className="text-[9px] tracking-widest text-[#8C6A28] font-semibold uppercase">
-                  ശ്രീ ഗുരുവായൂരപ്പൻ തുണ · ॐ
-                </div>
                 <div className="font-pinyon text-2xl sm:text-3xl text-[#996515] my-0.5">
                   Save the Date
                 </div>

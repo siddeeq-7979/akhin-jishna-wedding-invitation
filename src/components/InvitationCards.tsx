@@ -100,11 +100,6 @@ export const InvitationCards: React.FC = () => {
         {/* Botanical watercolor top branch */}
         <BotanicalBranch className="-mt-2 mb-2" />
 
-        {/* Traditional Auspicious Invocation */}
-        <div className="text-[11px] tracking-[0.25em] text-[#8C6A28] font-semibold uppercase mb-2">
-          ശ്രീ ഗുരുവായൂരപ്പൻ തുണ · ॐ · ശുഭം
-        </div>
-
         {/* Calligraphy Couple Names (matching cursive reference) */}
         <div className="py-2">
           <h1 className="font-script text-4xl sm:text-5xl md:text-6xl text-stone-900 leading-tight">
